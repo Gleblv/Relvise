@@ -169,6 +169,13 @@ body {
 .page__whoweare {
 }
 
+.page__clients:not(:last-child) {
+    margin: 0 0 10px 0;
+}
+
+.page__subscribe {
+}
+
 /* ---HEADER-BLOCK-------------------------------------------------------------------------------------- */
 
 .header-block {
@@ -709,5 +716,131 @@ body {
     }
     .whoweare__header {
         margin: 0 0 40px 0;
+    }
+}
+
+/* ---CLIENTS------------------------------------------- */
+
+.clients {
+    padding: 50px 0;
+}
+.clients__container {
+}
+.clients__items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.clients__item {
+    padding: 8px 15px;
+    flex: 0 1 16.6667%;
+    text-align: center;
+    min-width: 140px;
+}
+
+.clients__item img {
+    max-width: 100%;
+}
+
+@media (max-width: 667px) {
+    .clients {
+        padding: 30px 0;
+    }
+}
+
+/* ---SUBSCRIBE--------------------------------------------- */
+
+.subscribe {
+    position: relative;
+    padding: 0 0 20px 0;
+}
+
+.subscribe::after {
+    content: '';
+
+    position: absolute;
+    background: #17213C;
+    bottom: 0;
+    width: 100%;
+    height: 77px;
+    left: 0;
+}
+
+.subscribe__container {
+}
+.subcribe__body {
+    padding: 50px 30px;
+    background: #17213C;
+    border-radius: 2px;
+    position: relative;
+    z-index: 2;
+}
+.subscribe__title {
+    color: #fff;
+    flex: 0 1 50%;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: calc(32 / 24 * 100%);
+    letter-spacing: 0.1px;
+}
+.subscribe__form {
+    flex: 0 1 50%;
+    display: flex;
+    align-items: center;
+}
+.subscribe__input {
+    width: 100%;
+    flex: 1 1 auto;
+    min-height: 58px;
+    padding: 0 20px;
+    background: #F9F9F9;
+    border: 1px solid #E6E6E6;
+    border-radius: 5px 0 0 5px;
+    border-right: 0px;
+    box-sizing: border-box;
+}
+
+.subscribe__input:focus {
+    color: #000;
+}
+ 
+.subscribe__button {
+    background: #FF7B47;
+    border: 1px solid #E6E6E6;
+    border-radius: 0px 5px 5px 0px;
+    display: flex;
+    min-height: 58px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 22px;
+}
+
+@media (min-width: 1070px) {
+    .subcribe__body {
+        margin: 0 30px;
+    }
+}
+
+@media (min-width: 810px) {
+    .subcribe__body {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 810px) {
+    .subscribe__title {
+        margin: 0 0 20px 0;
+    }
+
+    .subcribe__body {
+        margin: 0 -15px;
+        padding: 10px 15px;
+    }
+
+    .subscribe__button {
+        padding: 0 15px;
     }
 }
